@@ -6,13 +6,13 @@
     <HeaderNav />
   </header>
   <main class="main">
-    <div class="content-wapper"></div>
+    <div class="content-wapper">
+      <router-view />
+    </div>
   </main>
   <footer class="footer">
     <span class="footer__span">All rights reserved</span>
   </footer>
-
-  <!-- <router-view /> -->
 </template>
 
 <script>
