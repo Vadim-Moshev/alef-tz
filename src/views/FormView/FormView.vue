@@ -1,7 +1,7 @@
 <template>
   <form class="form-view">
     <ViewHeader class="form-view__header">Персональные данные</ViewHeader>
-    <TextField />
+    <TextField caption="Имя" />
   </form>
 </template>
 
