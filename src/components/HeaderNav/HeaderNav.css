@@ -1,0 +1,4 @@
+.header-nav-wrapper {
+  display: flex;
+  flex-grow: 1;
+}

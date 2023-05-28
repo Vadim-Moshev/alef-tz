@@ -3,6 +3,7 @@
     <router-link to="/" class="header-logo">
       <img src="./assets/logo.png" alt="" />
     </router-link>
+    <HeaderNav />
   </header>
   <main class="main">
     <div class="content-wapper"></div>
@@ -11,5 +12,16 @@
 
   <!-- <router-view /> -->
 </template>
+
+<script>
+import HeaderNav from "./components/HeaderNav/HeaderNav";
+
+export default {
+  name: "App",
+  components: {
+    HeaderNav,
+  },
+};
+</script>
 
 <style src="./App.css"></style>
