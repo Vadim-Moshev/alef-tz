@@ -1,4 +1,6 @@
-<template>формочка!</template>
+<template>
+  <form class="form-view"></form>
+</template>
 
 <script>
 export default {
@@ -6,4 +8,4 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped src="./FormView.css"></style>
