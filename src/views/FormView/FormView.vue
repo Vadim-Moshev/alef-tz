@@ -1,10 +1,17 @@
 <template>
-  <form class="form-view"></form>
+  <form class="form-view">
+    <ViewHeader class="form-view__header">Персональные данные</ViewHeader>
+  </form>
 </template>
 
 <script>
+import ViewHeader from "@/components/ViewHeader/ViewHeader";
+
 export default {
   name: "FormView",
+  components: {
+    ViewHeader,
+  },
 };
 </script>
 

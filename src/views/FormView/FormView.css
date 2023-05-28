@@ -3,3 +3,7 @@
   align-items: flex-start;
   flex-direction: column;
 }
+
+.form-view__header {
+  margin-bottom: 20px;
+}
