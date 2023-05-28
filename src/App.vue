@@ -1,5 +1,9 @@
 <template>
-  <header class="header">1</header>
+  <header class="header">
+    <router-link to="/" class="header-logo">
+      <img src="./assets/logo.png" alt="" />
+    </router-link>
+  </header>
   <main class="main">
     <div class="content-wapper"></div>
   </main>
