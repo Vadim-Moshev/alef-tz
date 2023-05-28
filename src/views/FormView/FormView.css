@@ -21,3 +21,18 @@
   align-items: center;
   justify-content: space-between;
 }
+
+.form-view__save-button {
+  cursor: pointer;
+  background-color: #01a7fd;
+  border: none;
+  align-self: flex-start;
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #fff;
+  border-radius: 100px;
+  width: 118px;
+  padding: 17px 21px;
+}
