@@ -1,6 +1,7 @@
 .form-view {
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
+  text-align: left;
   flex-direction: column;
 }
 
