@@ -1,4 +1,22 @@
 .header-nav-wrapper {
   display: flex;
   flex-grow: 1;
+  justify-content: center;
+  gap: 27px;
+}
+
+.header-nav-wrapper__link {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  /* identical to box height, or 171% */
+
+  color: #111111;
+  text-decoration: none;
+}
+
+.header-nav-wrapper__link:hover {
+  color: #01a7fd;
 }

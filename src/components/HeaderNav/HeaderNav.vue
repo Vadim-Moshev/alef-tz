@@ -2,7 +2,7 @@
   <nav class="header-nav-wrapper">
     <router-link to="/" class="header-nav-wrapper__link"> Форма </router-link>
     <router-link to="/preview" class="header-nav-wrapper__link">
-      Форма
+      Превью
     </router-link>
   </nav>
 </template>
