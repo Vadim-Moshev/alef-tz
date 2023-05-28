@@ -3,8 +3,21 @@
   align-items: stretch;
   text-align: left;
   flex-direction: column;
+  gap: 33px;
+}
+
+.form-view_section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .form-view__header {
   margin-bottom: 20px;
+}
+
+.children-control-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
