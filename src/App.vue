@@ -8,7 +8,9 @@
   <main class="main">
     <div class="content-wapper"></div>
   </main>
-  <footer class="footer"></footer>
+  <footer class="footer">
+    <span class="footer__span">All rights reserved</span>
+  </footer>
 
   <!-- <router-view /> -->
 </template>
