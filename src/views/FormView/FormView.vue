@@ -19,7 +19,12 @@
         </button>
       </div>
       <div v-if="children.length > 0" class="child-blocks-container">
-        <ChildBlock v-for="(child, idx) in children" :key="idx" />
+        <ChildBlock
+          v-for="child in children"
+          :key="child.index"
+          :childIndex="child.index"
+          :onRemoveChild="removeChild"
+        />
       </div>
     </section>
     <button type="button" class="form-view__save-button">Сохранить</button>
@@ -60,9 +65,21 @@ export default {
         return;
       }
 
-      const newChild = { name: "", age: 0 };
+      const index = Date.now().toString();
+      const newChild = { name: "", age: 0, index };
+
       this.children.push(newChild);
       this.childrenCount++;
+    },
+    removeChild(childIndex) {
+      const indexToRemove = this.children.findIndex(
+        (child) => child.index === childIndex
+      );
+
+      // alert()
+
+      this.children.splice(indexToRemove, 1);
+      this.childrenCount--;
     },
   },
 };
