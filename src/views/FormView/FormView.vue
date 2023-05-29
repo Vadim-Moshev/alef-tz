@@ -8,7 +8,10 @@
     <section class="form-view_section">
       <div class="children-control-panel">
         <ViewHeader class="form-view__header">Дети (макс. 5)</ViewHeader>
-        <div>кнопк0</div>
+        <button type="button" class="form-view__add-child-button">
+          <img :src="cross" alt="" />
+          <span>Добавить ребёнка</span>
+        </button>
       </div>
     </section>
     <button type="button" class="form-view__save-button">Сохранить</button>
@@ -24,6 +27,11 @@ export default {
   components: {
     ViewHeader,
     TextField,
+  },
+  computed: {
+    cross() {
+      return require("@/assets/cross.svg");
+    },
   },
 };
 </script>
