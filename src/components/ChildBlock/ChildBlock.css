@@ -1,0 +1,21 @@
+.child-block {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.child-block__text-field {
+  flex-grow: 1;
+}
+
+.child-block__button {
+  cursor: pointer;
+  padding: 0;
+  background: none;
+  border: none;
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #01a7fd;
+}
