@@ -11,21 +11,19 @@
         <div>кнопк0</div>
       </div>
     </section>
-    <SimpleButton class="form-view__save-button" caption="Сохранить" />
+    <button type="button" class="form-view__save-button">Сохранить</button>
   </form>
 </template>
 
 <script>
 import ViewHeader from "@/components/ViewHeader/ViewHeader";
 import TextField from "@/components/TextField/TextField";
-import SimpleButton from "@/components/SimpleButton/SimpleButton";
 
 export default {
   name: "FormView",
   components: {
     ViewHeader,
     TextField,
-    SimpleButton,
   },
 };
 </script>
