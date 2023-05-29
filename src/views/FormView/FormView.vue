@@ -11,7 +11,7 @@
         <div>кнопк0</div>
       </div>
     </section>
-    <SimpleButton class="form-view__save-button" />
+    <SimpleButton class="form-view__save-button" caption="Сохранить" />
   </form>
 </template>
 
