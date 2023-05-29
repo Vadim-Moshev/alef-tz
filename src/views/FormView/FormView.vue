@@ -7,7 +7,7 @@
     </section>
     <section class="form-view_section">
       <div class="children-control-panel">
-        <ViewHeader class="form-view__header">Дети (макс. 5)</ViewHeader>
+        <ViewHeader>Дети (макс. 5)</ViewHeader>
         <button type="button" class="form-view__add-child-button">
           <img :src="cross" alt="" />
           <span>Добавить ребёнка</span>
