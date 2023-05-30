@@ -8,7 +8,7 @@
 <script>
 export default {
   name: "TextField",
-  emits: ["update:modelValue"],
+  emits: ["update:modelValue", "onValueUpdate"],
   props: {
     caption: {
       type: String,
@@ -20,6 +20,7 @@ export default {
       const value = event.target.value;
 
       this.$emit("update:modelValue", value);
+      this.$emit("onValueUpdate", value);
     },
   },
 };

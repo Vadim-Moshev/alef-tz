@@ -24,6 +24,8 @@
           :key="child.index"
           :childIndex="child.index"
           :onRemoveChild="removeChild"
+          v-model:childName="child.name"
+          v-model:childAge="child.age"
         />
       </div>
     </section>
@@ -68,7 +70,7 @@ export default {
       }
 
       const index = Date.now().toString();
-      const newChild = { name: "", age: 0, index };
+      const newChild = { name: "", age: "", index };
 
       this.children.push(newChild);
       this.childrenCount++;

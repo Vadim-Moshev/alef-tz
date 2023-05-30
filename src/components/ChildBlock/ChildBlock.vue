@@ -1,7 +1,15 @@
 <template>
   <div class="child-block">
-    <TextField class="child-block__text-field" caption="Имя" />
-    <TextField class="child-block__text-field" caption="Возраст" />
+    <TextField
+      class="child-block__text-field"
+      caption="Имя"
+      v-model="childName"
+    />
+    <TextField
+      class="child-block__text-field"
+      caption="Возраст"
+      v-model="childAge"
+    />
     <button
       class="child-block__button"
       type="button"
@@ -17,6 +25,7 @@ import TextField from "@/components/TextField/TextField";
 
 export default {
   name: "ChildBlock",
+  emits: ["update:childName", "update:childAge"],
   components: {
     TextField,
   },
@@ -24,9 +33,23 @@ export default {
     onRemoveChild: Function,
     childIndex: String,
   },
+  data() {
+    return {
+      childName: "",
+      childAge: "",
+    };
+  },
   methods: {
     handleChildRemoving() {
       this.onRemoveChild(this.childIndex);
+    },
+  },
+  watch: {
+    childName(newValue) {
+      this.$emit("update:childName", newValue);
+    },
+    childAge(newValue) {
+      this.$emit("update:childAge", newValue);
     },
   },
 };
