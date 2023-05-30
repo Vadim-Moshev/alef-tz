@@ -29,7 +29,9 @@
         />
       </div>
     </section>
-    <button type="button" class="form-view__save-button">Сохранить</button>
+    <button type="button" class="form-view__save-button" @click="saveData">
+      Сохранить
+    </button>
   </form>
 </template>
 
@@ -42,6 +44,7 @@ const MAX_CHILDREN_COUNT = 5;
 
 export default {
   name: "FormView",
+  emits: ["saveData"],
   components: {
     ViewHeader,
     TextField,
@@ -84,6 +87,15 @@ export default {
 
       this.children.splice(indexToRemove, 1);
       this.childrenCount--;
+    },
+    saveData() {
+      const payload = {
+        userName: this.userName,
+        userAge: this.userAge,
+        children: this.children,
+      };
+
+      this.$emit("saveData", payload);
     },
   },
 };

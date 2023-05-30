@@ -7,7 +7,7 @@
   </header>
   <main class="main">
     <div class="content-wapper">
-      <router-view />
+      <router-view @saveData="saveData" />
     </div>
   </main>
   <footer class="footer">
@@ -22,6 +22,16 @@ export default {
   name: "App",
   components: {
     HeaderNav,
+  },
+  data() {
+    return {
+      userData: null,
+    };
+  },
+  methods: {
+    saveData(payload) {
+      this.userData = payload;
+    },
   },
 };
 </script>
