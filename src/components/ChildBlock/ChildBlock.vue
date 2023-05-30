@@ -3,11 +3,13 @@
     <TextField
       class="child-block__text-field"
       caption="Имя"
+      :value="name"
       v-model="childName"
     />
     <TextField
       class="child-block__text-field"
       caption="Возраст"
+      :value="age"
       v-model="childAge"
     />
     <button
@@ -32,6 +34,8 @@ export default {
   props: {
     onRemoveChild: Function,
     childIndex: String,
+    name: String,
+    age: String,
   },
   data() {
     return {

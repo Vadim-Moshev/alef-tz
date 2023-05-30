@@ -24,6 +24,8 @@
           :key="child.index"
           :childIndex="child.index"
           :onRemoveChild="removeChild"
+          :name="child.name"
+          :age="child.age"
           v-model:childName="child.name"
           v-model:childAge="child.age"
         />
