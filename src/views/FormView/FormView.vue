@@ -98,8 +98,6 @@ export default {
         (child) => child.index === childIndex
       );
 
-      // alert()
-
       this.children.splice(indexToRemove, 1);
       this.childrenCount--;
     },
