@@ -27,6 +27,7 @@
 
 <script>
 import ViewHeader from "@/components/ViewHeader/ViewHeader";
+import inclineYears from "@/utils/inclineYears.js";
 
 export default {
   name: "ChildrenTableView",
@@ -48,10 +49,13 @@ export default {
       return;
     }
 
-    this.aboutUser = `${userName} (${userAge})`.trim();
+    const age = Number(userAge);
+    this.aboutUser = `${userName} (${inclineYears(age)})`;
 
     this.children = this.userData.children.map((child) => {
-      return `${child.name} (${child.age})`;
+      const age = Number(child.age);
+
+      return `${child.name} (${inclineYears(age)})`;
     });
   },
 };
