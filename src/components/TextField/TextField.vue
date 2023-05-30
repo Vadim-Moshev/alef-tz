@@ -4,7 +4,7 @@
     <input
       :value="value"
       class="text-field__input"
-      type="text"
+      :type="fieldType"
       @input="handleInput"
       required
     />
@@ -21,6 +21,10 @@ export default {
       required: true,
     },
     value: String,
+    number: {
+      type: Boolean,
+      default: false,
+    },
   },
   methods: {
     handleInput(event) {
@@ -28,6 +32,11 @@ export default {
 
       this.$emit("update:modelValue", value);
       this.$emit("onValueUpdate", value);
+    },
+  },
+  computed: {
+    fieldType() {
+      return this.number ? "number" : "text";
     },
   },
 };

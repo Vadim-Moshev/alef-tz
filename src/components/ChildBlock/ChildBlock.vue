@@ -9,6 +9,7 @@
     <TextField
       class="child-block__text-field"
       caption="Возраст"
+      :number="true"
       :value="age"
       v-model="childAge"
     />

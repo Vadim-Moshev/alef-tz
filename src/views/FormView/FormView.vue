@@ -3,7 +3,12 @@
     <section class="form-view_section">
       <ViewHeader class="form-view__header">Персональные данные</ViewHeader>
       <TextField caption="Имя" v-model="userName" :value="userName" />
-      <TextField caption="Возраст" v-model="userAge" :value="userAge" />
+      <TextField
+        caption="Возраст"
+        v-model="userAge"
+        :value="userAge"
+        :number="true"
+      />
     </section>
     <section class="form-view_section">
       <div class="children-control-panel">
