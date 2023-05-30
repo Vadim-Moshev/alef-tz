@@ -2,8 +2,8 @@
   <form class="form-view">
     <section class="form-view_section">
       <ViewHeader class="form-view__header">Персональные данные</ViewHeader>
-      <TextField caption="Имя" v-model="userName" />
-      <TextField caption="Возраст" v-model="userAge" />
+      <TextField caption="Имя" v-model="userName" :value="userName" />
+      <TextField caption="Возраст" v-model="userAge" :value="userAge" />
     </section>
     <section class="form-view_section">
       <div class="children-control-panel">
@@ -45,6 +45,9 @@ const MAX_CHILDREN_COUNT = 5;
 export default {
   name: "FormView",
   emits: ["saveData"],
+  props: {
+    userData: Object,
+  },
   components: {
     ViewHeader,
     TextField,
@@ -57,6 +60,11 @@ export default {
       children: [],
       childrenCount: 0,
     };
+  },
+  created() {
+    this.userName = this.userData.userName;
+    this.userAge = this.userData.userAge;
+    this.children = this.userData.children;
   },
   computed: {
     cross() {

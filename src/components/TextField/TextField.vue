@@ -1,7 +1,12 @@
 <template>
   <label class="text-field__wrapper">
     <div class="text-field__caption">{{ caption }}</div>
-    <input class="text-field__input" type="text" @input="handleInput" />
+    <input
+      :value="value"
+      class="text-field__input"
+      type="text"
+      @input="handleInput"
+    />
   </label>
 </template>
 
@@ -14,6 +19,7 @@ export default {
       type: String,
       required: true,
     },
+    value: String,
   },
   methods: {
     handleInput(event) {

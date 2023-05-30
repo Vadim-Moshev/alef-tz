@@ -7,7 +7,7 @@
   </header>
   <main class="main">
     <div class="content-wapper">
-      <router-view @saveData="saveData" />
+      <router-view :userData="userData" @saveData="saveData" />
     </div>
   </main>
   <footer class="footer">
