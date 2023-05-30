@@ -6,6 +6,7 @@
       class="text-field__input"
       type="text"
       @input="handleInput"
+      required
     />
   </label>
 </template>

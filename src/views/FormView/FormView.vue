@@ -1,5 +1,5 @@
 <template>
-  <form class="form-view">
+  <form class="form-view" @submit.prevent="saveData">
     <section class="form-view_section">
       <ViewHeader class="form-view__header">Персональные данные</ViewHeader>
       <TextField caption="Имя" v-model="userName" :value="userName" />
@@ -31,7 +31,7 @@
         />
       </div>
     </section>
-    <button type="button" class="form-view__save-button" @click="saveData">
+    <button type="submit" class="form-view__save-button" @submit="saveData">
       Сохранить
     </button>
   </form>
