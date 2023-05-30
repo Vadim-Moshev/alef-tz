@@ -1,11 +1,11 @@
 <template>
-  <div v-if="userData.userName === ''">
+  <div v-if="aboutUser === ''">
     Пользователь не предоставил информацию о себе.
   </div>
   <template v-else>
     <section class="children-table-view__section">
       <ViewHeader>Персональные данные</ViewHeader>
-      <div class="children-table-view__user-data">{{ userDataString }}</div>
+      <div class="children-table-view__user-data">{{ aboutUser }}</div>
     </section>
     <div v-if="userData.children.length === 0">
       Пользователь не предоставил информацию о детях.
@@ -13,8 +13,13 @@
     <section v-else class="children-table-view__section">
       <ViewHeader>Дети</ViewHeader>
       <ul class="children-table-view__children-list">
-        <li class="children-table-view__child-item">Пётр, 10 лет</li>
-        <li class="children-table-view__child-item">Пётр, 10 лет</li>
+        <li
+          v-for="(child, idx) in children"
+          :key="idx"
+          class="children-table-view__child-item"
+        >
+          {{ child }}
+        </li>
       </ul>
     </section>
   </template>
@@ -31,11 +36,23 @@ export default {
   components: {
     ViewHeader,
   },
-  computed: {
-    userDataString() {
-      const { userName, userAge } = this.userData;
-      return `${userName}, ${userAge} лет.`;
-    },
+  data() {
+    return {
+      aboutUser: "",
+      children: [],
+    };
+  },
+  created() {
+    const { userName, userAge } = this.userData;
+    if (userName === "") {
+      return;
+    }
+
+    this.aboutUser = `${userName} (${userAge})`.trim();
+
+    this.children = this.userData.children.map((child) => {
+      return `${child.name} (${child.age})`;
+    });
   },
 };
 </script>
