@@ -2,8 +2,8 @@
   <form class="form-view">
     <section class="form-view_section">
       <ViewHeader class="form-view__header">Персональные данные</ViewHeader>
-      <TextField caption="Имя" />
-      <TextField caption="Возраст" />
+      <TextField caption="Имя" v-model="userName" />
+      <TextField caption="Возраст" v-model="userAge" />
     </section>
     <section class="form-view_section">
       <div class="children-control-panel">
@@ -47,6 +47,8 @@ export default {
   },
   data() {
     return {
+      userName: "",
+      userAge: "",
       children: [],
       childrenCount: 0,
     };
