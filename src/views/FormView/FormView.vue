@@ -28,7 +28,7 @@
           v-for="child in children"
           :key="child.index"
           :childIndex="child.index"
-          :onRemoveChild="removeChild"
+          @removeChild="removeChild"
           :name="child.name"
           :age="child.age"
           v-model:childName="child.name"

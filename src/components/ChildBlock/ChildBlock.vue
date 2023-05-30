@@ -28,12 +28,11 @@ import TextField from "@/components/TextField/TextField";
 
 export default {
   name: "ChildBlock",
-  emits: ["update:childName", "update:childAge"],
+  emits: ["update:childName", "update:childAge", "removeChild"],
   components: {
     TextField,
   },
   props: {
-    onRemoveChild: Function,
     childIndex: String,
     name: String,
     age: String,
@@ -46,7 +45,7 @@ export default {
   },
   methods: {
     handleChildRemoving() {
-      this.onRemoveChild(this.childIndex);
+      this.$emit("removeChild", this.childIndex);
     },
   },
   watch: {
