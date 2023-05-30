@@ -25,7 +25,11 @@ export default {
   },
   data() {
     return {
-      userData: null,
+      userData: {
+        userName: "",
+        userAge: "",
+        children: [],
+      },
     };
   },
   methods: {
