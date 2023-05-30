@@ -1,0 +1,35 @@
+.children-table-view__section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+  margin-bottom: 73px;
+}
+
+.children-table-view__section:last-child {
+  margin-bottom: 0;
+}
+
+.children-table-view__user-data,
+.children-table-view__child-item {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.children-table-view__children-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: flex-start;
+}
+
+.children-table-view__child-item {
+  padding: 10px 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
