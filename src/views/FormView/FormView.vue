@@ -106,6 +106,7 @@ export default {
       };
 
       this.$emit("saveData", payload);
+      this.$router.push("/preview");
     },
   },
 };
